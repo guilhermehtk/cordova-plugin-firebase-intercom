@@ -1,8 +1,7 @@
 import { AndroidManifestUtils } from '../../utils'
 
 const FIREBASE_PLUGIN_SERVICE_NODES = [
-  'org.apache.cordova.firebase.FirebasePluginMessagingService',
-  'org.apache.cordova.firebase.FirebasePluginInstanceIDService'
+  'org.apache.cordova.firebase.FirebasePluginMessagingService'
 ]
 
 module.exports = context => {

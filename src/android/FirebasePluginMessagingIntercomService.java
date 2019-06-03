@@ -12,14 +12,19 @@ public class FirebasePluginMessagingIntercomService extends FirebasePluginMessag
   private static final String TAG = "FirebaseIntercomPlugin";
   private final IntercomPushClient intercomPushClient = new IntercomPushClient();
 
+  @Override 
+  public void onNewToken(String refreshedToken) {
+    this.intercomPushClient.sendTokenToIntercom(getApplication(), refreshedToken);
+    super.onNewToken(refreshedToken);
+  }
+
   @Override
   public void onMessageReceived(RemoteMessage remoteMessage) {
     Map message = remoteMessage.getData();
     if (this.intercomPushClient.isIntercomPush(message)) {
       this.intercomPushClient.handlePush(getApplication(), message);
       Log.d(TAG, "FirebasePluginMessagingIntercomService.onMessageReceived() HAS BEEN HANDLED BY INTERCOM! 😎");
-    } else {
-      super.onMessageReceived(remoteMessage);
     }
+    super.onMessageReceived(remoteMessage);
   }
 }

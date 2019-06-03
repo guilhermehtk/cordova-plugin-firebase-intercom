@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/roalcantara/cordova-plugin-firebase-intercom.git"
+    "url": "https://github.com/guilhermehtk/cordova-plugin-firebase-intercom.git"
   },
   "keywords": [
     "cordova",
@@ -30,9 +30,9 @@
   "author": "Rogério R. Alcântara",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/roalcantara/cordova-plugin-firebase-intercom/issues"
+    "url": "https://github.com/guilhermehtk/cordova-plugin-firebase-intercom/issues"
   },
-  "homepage": "https://github.com/roalcantara/cordova-plugin-firebase-intercom#readme",
+  "homepage": "https://github.com/guilhermehtk/cordova-plugin-firebase-intercom#readme",
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",

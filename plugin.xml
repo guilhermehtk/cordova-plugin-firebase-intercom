@@ -9,11 +9,6 @@
     <framework src="com.google.firebase:firebase-messaging:+" />
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <service android:name="com.roalcantara.firebase.intercom.FirebaseInstanceIdIntercomService">
-        <intent-filter>
-          <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-        </intent-filter>
-      </service>
       <service android:name="com.roalcantara.firebase.intercom.FirebasePluginMessagingIntercomService">
         <intent-filter>
           <action android:name="com.google.firebase.MESSAGING_EVENT"/>
@@ -21,7 +16,6 @@
       </service>
     </config-file>
 
-    <source-file src="src/android/FirebaseInstanceIdIntercomService.java" target-dir="src/com/roalcantara/firebase/intercom" />
     <source-file src="src/android/FirebasePluginMessagingIntercomService.java" target-dir="src/com/roalcantara/firebase/intercom" />
 
     <hook type="after_prepare" src="scripts/hooks/after-prepare/remove-firebase-plugin-nodes.hook.js" />

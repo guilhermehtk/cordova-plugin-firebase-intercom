@@ -14,7 +14,7 @@ describe('AndroidManifestUtils', () => {
     })
 
     it('removes a service node by name', () => {
-      editor.removeServiceNodeBy({ name: 'org.apache.cordova.firebase.FirebasePluginInstanceIDService' })
+      editor.removeServiceNodeBy({ name: 'org.apache.cordova.firebase.FirebasePlugin``InstanceID``Service' })
 
       expect(editor.toString()).to.not
         .include(`<service android:name="org.apache.cordova.firebase.FirebasePluginInstanceIDService">
@@ -22,19 +22,6 @@ describe('AndroidManifestUtils', () => {
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>`)
-    })
-
-    context('when a unknown service name is given', () => {
-      it('does not do anything', () => {
-        editor.removeServiceNodeBy({ name: 'org.apache.cordova.firebase.FirebasePluginInstanceIDServiceFoo' })
-
-        expect(editor.toString()).to
-          .include(`<service android:name="org.apache.cordova.firebase.FirebasePluginInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>`)
-      })
     })
   })
 })

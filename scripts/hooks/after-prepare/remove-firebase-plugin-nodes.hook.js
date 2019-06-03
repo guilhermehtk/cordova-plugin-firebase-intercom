@@ -2,8 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var utils_1 = require("../../utils");
 var FIREBASE_PLUGIN_SERVICE_NODES = [
-    'org.apache.cordova.firebase.FirebasePluginMessagingService',
-    'org.apache.cordova.firebase.FirebasePluginInstanceIDService'
+    'org.apache.cordova.firebase.FirebasePluginMessagingService'
 ];
 module.exports = function (context) {
     var fs = context.requireCordovaModule('fs');
